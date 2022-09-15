@@ -23,7 +23,11 @@ export class ClientListComponent implements OnInit {
     if (!this.search) {
       this.displayClients = this.clients;
     } else {
-      this.displayClients = this.clients.filter(c => c.firstName.includes(this.search));
+      this.displayClients = this.clients.filter(c =>
+        c.firstName.toUpperCase().includes(this.search.toUpperCase()) ||
+        c.lastName.toUpperCase().includes(this.search.toUpperCase()) ||
+        c.phone.includes(this.search)
+      );
     }
   }
 
