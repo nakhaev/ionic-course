@@ -1,0 +1,20 @@
+<ion-card>
+  <img src="{{ client.photo }}"/>
+
+  <ion-card-header>
+    <ion-card-subtitle>{{ client.lastName }}</ion-card-subtitle>
+    <ion-card-title>{{ client.firstName }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>Next Visit: {{ client.nextVisit }} </p>
+    <p><small> Last Visit: {{ client.prevVisit }} </small></p>
+    <p><small> {{ client.phone }} </small></p>
+  </ion-card-content>
+
+<!--  <ion-item>-->
+<!--    <ion-icon name="pin" slot="end"></ion-icon>-->
+<!--    <ion-label>ion-item in a card, icon left, button right</ion-label>-->
+<!--    <ion-button fill="outline" slot="end">View</ion-button>-->
+<!--  </ion-item>-->
+</ion-card>

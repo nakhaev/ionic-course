@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "firstName": "Olga",
+    "lastName": "Ivanova",
+    "sex": "Female",
+    "phone": "0975642313",
+    "mail": "o.ivanova@gmail.com",
+    "instagram": "",
+    "prevVisit": "2022-07-15 12:00",
+    "nextVisit": "2022-09-15 12:00",
+    "photo": "https://funik.ru/wp-content/uploads/2019/07/6c390476d2850eece873-700x525.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Nina",
+    "lastName": "Petrova",
+    "sex": "Female",
+    "phone": "0975642413",
+    "mail": "n.petrova@gmail.com",
+    "instagram": "",
+    "prevVisit": "2022-08-15 09:00",
+    "nextVisit": "2022-09-15 13:00",
+    "photo": "https://funik.ru/wp-content/uploads/2019/07/25a467650a92f2019572-700x525.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "Marina",
+    "lastName": "Belka",
+    "sex": "Female",
+    "phone": "0975642515",
+    "mail": "m.belka@gmail.com",
+    "instagram": "",
+    "prevVisit": "2022-09-05 10:30",
+    "nextVisit": "2022-09-15 14:30",
+    "photo": "https://funik.ru/wp-content/uploads/2019/07/be6b64c86737b4e02ebf-700x525.jpg"
+  },
+  {
+    "id": 4,
+    "firstName": "Nazar",
+    "lastName": "Himars",
+    "sex": "Male",
+    "phone": "0975642616",
+    "mail": "n.himars@gmail.com",
+    "instagram": "",
+    "prevVisit": "2022-09-05 11:00",
+    "nextVisit": "2022-09-17 17:30",
+    "photo": "https://img.tsn.ua/cached/432/tsn-8ef996fbeaebf7621936189b51062f05/thumbs/428x268/32/53/8db74c172abe2940933c33ea13bf5332.jpeg"
+  }
+]
+
