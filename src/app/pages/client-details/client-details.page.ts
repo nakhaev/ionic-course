@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route } from '@angular/router';
+import { Observable } from 'rxjs';
+import {MockService} from '../../services/mock.service';
 
 @Component({
   selector: 'app-client-details',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientDetailsPage implements OnInit {
 
-  constructor() { }
+  public clientId: number;
+  public client: object;
+
+  constructor(
+    protected activatedRoute: ActivatedRoute,
+    protected mockService: MockService,
+    ) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(params => {
+      this.clientId = params.id;
+      if (this.clientId) {
+        console.log('this.clientId', this.clientId);
+        this.client = this.mockService.getClientById(this.clientId);
+      }
+    });
   }
 
 }

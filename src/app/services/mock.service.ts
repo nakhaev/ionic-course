@@ -15,4 +15,8 @@ export class MockService {
   public getClientList() {
     return this.clients;
   }
+
+  public getClientById(id: number) {
+    return this.clients.find(c => c.id == id);
+  }
 }

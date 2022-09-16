@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ClientDetailsPage } from './pages/client-details/client-details.page';
+import { ClientsPage } from './pages/clients/clients.page';
+import { SchedulePage} from './pages/schedule/schedule.page';
+import { AboutPage } from './pages/about/about.page';
+import { ManufacturersPage } from './pages/manufacturers/manufacturers.page';
 
 const routes: Routes = [
   {
@@ -9,23 +14,23 @@ const routes: Routes = [
   },
   {
     path: 'schedule',
-    loadChildren: () => import('./pages/schedule/schedule.module').then( m => m.SchedulePageModule)
+    component: SchedulePage,
   },
   {
     path: 'clients',
-    loadChildren: () => import('./pages/clients/clients.module').then( m => m.ClientsPageModule)
+    component: ClientsPage
   },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+    component: AboutPage
   },
   {
     path: 'manufacturers',
-    loadChildren: () => import('./pages/manufacturers/manufacturers.module').then( m => m.ManufacturersPageModule)
+    component: ManufacturersPage,
   },
   {
     path: 'clients/:id',
-    loadChildren: () => import('./pages/client-details/client-details.module').then( m => m.ClientDetailsPageModule)
+    component: ClientDetailsPage
   },
 ];
 
