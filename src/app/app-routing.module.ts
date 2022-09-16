@@ -5,6 +5,7 @@ import { ClientsPage } from './pages/clients/clients.page';
 import { SchedulePage} from './pages/schedule/schedule.page';
 import { AboutPage } from './pages/about/about.page';
 import { ManufacturersPage } from './pages/manufacturers/manufacturers.page';
+import { ProfilePage } from './pages/profile/profile.page';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'clients/:id',
     component: ClientDetailsPage
+  },
+  {
+    path: 'profile',
+    component: ProfilePage
   },
 ];
 

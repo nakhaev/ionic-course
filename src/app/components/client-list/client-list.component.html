@@ -8,8 +8,8 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col *ngFor="let client of displayClients" size-xs="12" size-sm="6" size-md="4" size-lg="3" size-xl="2">
-      <app-client-card [client]="client"></app-client-card>
+    <ion-col *ngFor="let client of displayClients" size-xs="12" size-sm="6" size-md="4" size-lg="3">
+      <app-client-card [client]="client" (click)="goToClientProfile(client.id)"></app-client-card>
     </ion-col>
   </ion-row>
 </ion-grid>

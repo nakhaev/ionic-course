@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockService } from '../../services/mock.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-list',
@@ -12,7 +13,10 @@ export class ClientListComponent implements OnInit {
   public displayClients;
   public search = '';
 
-  constructor(protected mockService: MockService) { }
+  constructor(
+    protected mockService: MockService,
+    protected router: Router
+  ) {}
 
   ngOnInit() {
     this.clients = this.mockService.getClientList();
@@ -29,6 +33,10 @@ export class ClientListComponent implements OnInit {
         c.phone.includes(this.search)
       );
     }
+  }
+
+  public goToClientProfile(id: number) {
+    this.router.navigate([`/clients/${id}`]);
   }
 
 }
