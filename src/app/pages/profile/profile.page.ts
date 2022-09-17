@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MockService } from '../../services/mock.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  public userProfile: any;
+
+  constructor(protected mockService: MockService) { }
 
   ngOnInit() {
+    this.userProfile = this.mockService.getSelf(99);
   }
 
 }

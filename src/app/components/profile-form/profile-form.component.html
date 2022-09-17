@@ -4,27 +4,27 @@
 
         <ion-item>
           <ion-label position="floating">First Name</ion-label>
-          <ion-input placeholder="your first name" type="text"></ion-input>
+          <ion-input [(ngModel)]="userProfile.firstName" placeholder="your first name" type="text"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="floating">Last Name</ion-label>
-          <ion-input placeholder="your last name" type="text"></ion-input>
+          <ion-input [(ngModel)]="userProfile.lastName" placeholder="your last name" type="text"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="floating">Email</ion-label>
-          <ion-input placeholder="email address" type="email"></ion-input>
+          <ion-input [(ngModel)]="userProfile.mail" placeholder="email address" type="email"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="floating">Phone</ion-label>
-          <ion-input placeholder="phone number" type="number"></ion-input>
+          <ion-input [(ngModel)]="userProfile.phone" placeholder="phone number" type="number"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="floating">Gender</ion-label>
-          <ion-select placeholder="Select fruit">
+          <ion-select [(ngModel)]="userProfile.gender" placeholder="Select fruit">
             <ion-select-option value="apples">Male</ion-select-option>
             <ion-select-option value="oranges">Female</ion-select-option>
             <ion-select-option value="bananas">Other</ion-select-option>
