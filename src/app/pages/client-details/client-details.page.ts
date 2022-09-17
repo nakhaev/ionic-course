@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
-import { Observable } from 'rxjs';
-import {MockService} from '../../services/mock.service';
+import { ActivatedRoute } from '@angular/router';
+import { MockService } from '../../services/mock.service';
+import { IClient } from '../../interfaces/IClient';
 
 @Component({
   selector: 'app-client-details',
@@ -11,7 +11,7 @@ import {MockService} from '../../services/mock.service';
 export class ClientDetailsPage implements OnInit {
 
   public clientId: number;
-  public client: object;
+  public client: IClient;
 
   constructor(
     protected activatedRoute: ActivatedRoute,

@@ -15,7 +15,11 @@ import { FormsModule } from '@angular/forms';
 import { AboutPage } from './pages/about/about.page';
 import { ManufacturersPage } from './pages/manufacturers/manufacturers.page';
 import { SchedulePage } from './pages/schedule/schedule.page';
-import {TopMenuComponent} from './components/top-menu/top-menu.component';
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
+import { ProfileFormComponent } from './components/profile-form/profile-form.component';
+import { ClientFormComponent } from './components/client-form/client-form.component';
+import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
+import { ProfilePage } from './pages/profile/profile.page';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,13 @@ import {TopMenuComponent} from './components/top-menu/top-menu.component';
     ClientDetailsPage,
     ClientListComponent,
     AboutPage,
+    ProfilePage,
     ManufacturersPage,
     SchedulePage,
-    TopMenuComponent
+    TopMenuComponent,
+    ProfileFormComponent,
+    ProfileSettingsComponent,
+    ClientFormComponent,
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MockService } from '../../services/mock.service';
 import { Router } from '@angular/router';
+import { IClient } from '../../interfaces/IClient';
 
 @Component({
   selector: 'app-client-list',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class ClientListComponent implements OnInit {
 
-  public clients;
-  public displayClients;
+  public clients: IClient[];
+  public displayClients: IClient[];
   public search = '';
 
   constructor(
