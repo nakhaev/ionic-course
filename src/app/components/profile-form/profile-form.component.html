@@ -1,42 +1,43 @@
 <ion-grid>
   <ion-row>
     <ion-col>
+      <h2 class="ion-text-center">User profile</h2>
 
-        <ion-item>
-          <ion-label position="floating">First Name</ion-label>
-          <ion-input [(ngModel)]="userProfile.firstName" placeholder="your first name" type="text"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input [(ngModel)]="userProfile.firstName" placeholder="your first name" type="text"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Last Name</ion-label>
-          <ion-input [(ngModel)]="userProfile.lastName" placeholder="your last name" type="text"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Last Name</ion-label>
+        <ion-input [(ngModel)]="userProfile.lastName" placeholder="your last name" type="text"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input [(ngModel)]="userProfile.mail" placeholder="email address" type="email"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="userProfile.mail" placeholder="email address" type="email"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Phone</ion-label>
-          <ion-input [(ngModel)]="userProfile.phone" placeholder="phone number" type="number"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input [(ngModel)]="userProfile.phone" placeholder="phone number" type="number"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Gender</ion-label>
-          <ion-select [(ngModel)]="userProfile.gender" placeholder="Select fruit">
-            <ion-select-option value="apples">Male</ion-select-option>
-            <ion-select-option value="oranges">Female</ion-select-option>
-            <ion-select-option value="bananas">Other</ion-select-option>
-          </ion-select>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Gender</ion-label>
+        <ion-select [(ngModel)]="userProfile.gender" placeholder="Select fruit">
+          <ion-select-option value="male">Male</ion-select-option>
+          <ion-select-option value="female">Female</ion-select-option>
+          <ion-select-option value="other">Other</ion-select-option>
+        </ion-select>
+      </ion-item>
 
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col class="ion-text-right">
       <ion-button size="small">Save</ion-button>
-      <ion-button size="small" color="medium">Clear</ion-button>
+      <ion-button size="small" color="medium">Clear Changes</ion-button>
     </ion-col>
   </ion-row>
 </ion-grid>

@@ -20,6 +20,10 @@ import { ProfileFormComponent } from './components/profile-form/profile-form.com
 import { ClientFormComponent } from './components/client-form/client-form.component';
 import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
 import { ProfilePage } from './pages/profile/profile.page';
+import { SignInPage } from './pages/sign-in/sign-in.page';
+import {SignUpPage} from './pages/sign-up/sign-up.page';
+import {ForgotPasswordPage} from './pages/forgot-password/forgot-password.page';
+import {SupportFormComponent} from './components/support-form/support-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { ProfilePage } from './pages/profile/profile.page';
     ProfileFormComponent,
     ProfileSettingsComponent,
     ClientFormComponent,
+    SignInPage,
+    SignUpPage,
+    ForgotPasswordPage,
+    SupportFormComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

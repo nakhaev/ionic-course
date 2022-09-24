@@ -7,6 +7,8 @@
 <ion-content class="ion-padding">
   <app-profile-form [userProfile]="userProfile"></app-profile-form>
   <app-profile-settings [userProfile]="userProfile"></app-profile-settings>
-  <ion-button expand="block">Log out</ion-button>
+  <app-support-form [userProfile]="userProfile"></app-support-form>
+  <ion-button expand="block" (click)="logout()">Log out</ion-button>
+  <ion-button expand="block" color="warning">Become PRO</ion-button>
   <ion-button expand="block" color="danger">Delete Profile</ion-button>
 </ion-content>

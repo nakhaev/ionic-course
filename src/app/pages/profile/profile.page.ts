@@ -16,4 +16,8 @@ export class ProfilePage implements OnInit {
     this.userProfile = this.mockService.getSelf(99);
   }
 
+  public logout() {
+    this.mockService.logout();
+  }
+
 }

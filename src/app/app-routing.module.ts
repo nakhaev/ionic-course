@@ -6,6 +6,9 @@ import { SchedulePage} from './pages/schedule/schedule.page';
 import { AboutPage } from './pages/about/about.page';
 import { ManufacturersPage } from './pages/manufacturers/manufacturers.page';
 import { ProfilePage } from './pages/profile/profile.page';
+import { SignInPage } from './pages/sign-in/sign-in.page';
+import { SignUpPage } from './pages/sign-up/sign-up.page';
+import {ForgotPasswordPage} from './pages/forgot-password/forgot-password.page';
 
 const routes: Routes = [
   {
@@ -36,6 +39,18 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfilePage
+  },
+  {
+    path: 'sign-in',
+    component: SignInPage
+  },
+  {
+    path: 'sign-up',
+    component: SignUpPage
+  },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordPage
   },
 ];
 
