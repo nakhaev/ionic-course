@@ -3,27 +3,27 @@
     <ion-col>
       <h2 class="ion-text-center">User profile</h2>
 
-      <ion-item>
+      <ion-item class="ion-no-padding">
         <ion-label position="floating">First Name</ion-label>
         <ion-input [(ngModel)]="userProfile.firstName" placeholder="your first name" type="text"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item class="ion-no-padding">
         <ion-label position="floating">Last Name</ion-label>
         <ion-input [(ngModel)]="userProfile.lastName" placeholder="your last name" type="text"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item class="ion-no-padding">
         <ion-label position="floating">Email</ion-label>
         <ion-input [(ngModel)]="userProfile.mail" placeholder="email address" type="email"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item class="ion-no-padding">
         <ion-label position="floating">Phone</ion-label>
         <ion-input [(ngModel)]="userProfile.phone" placeholder="phone number" type="number"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item class="ion-no-padding">
         <ion-label position="floating">Gender</ion-label>
         <ion-select [(ngModel)]="userProfile.gender" placeholder="Select fruit">
           <ion-select-option value="male">Male</ion-select-option>
@@ -41,6 +41,3 @@
     </ion-col>
   </ion-row>
 </ion-grid>
-
-
-

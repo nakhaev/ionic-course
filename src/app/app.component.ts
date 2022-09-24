@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
       )
       .subscribe(
         event => {
-          console.log('currentPage', event.url);
           this.checkUser(event.url);
         }
       );
