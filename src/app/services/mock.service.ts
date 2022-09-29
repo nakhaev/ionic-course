@@ -46,4 +46,9 @@ export class MockService {
   public checkLoggedIn() {
     return this.isLoggedIn;
   }
+
+  public updateProfile(userProfile) {
+    this.user = userProfile;
+    console.log(this.user);
+  }
 }

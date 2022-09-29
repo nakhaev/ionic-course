@@ -10,4 +10,5 @@ export interface IClient {
   prevVisit: string;
   nextVisit: string;
   photo: string;
+  language?: string;
 }

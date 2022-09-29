@@ -1,29 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Sign In</ion-title>
+    <ion-title>{{ 'SIGNUP' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true" class="ion-padding">
   <ion-item class="ion-no-padding">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input [(ngModel)]="user.email" placeholder="email address" type="email"></ion-input>
+    <ion-label position="floating">{{ 'EMAIL' | translate }}</ion-label>
+    <ion-input [(ngModel)]="user.email" placeholder="{{ 'EMAIL_ADDRESS' | translate }}" type="email"></ion-input>
   </ion-item>
 
   <ion-item class="ion-margin-bottom ion-no-padding">
-    <ion-label position="floating">Password</ion-label>
-    <ion-input [(ngModel)]="user.password" placeholder="password" type="text"></ion-input>
+    <ion-label position="floating">{{ 'PASSWORD' | translate }}</ion-label>
+    <ion-input [(ngModel)]="user.password" placeholder="{{ 'PASSWORD' | translate }}" type="text"></ion-input>
   </ion-item>
 
   <ion-item class="ion-margin-bottom ion-no-padding">
-    <ion-label position="floating">Confirm Password</ion-label>
-    <ion-input [(ngModel)]="user.confirmPassword" placeholder="confirm password" type="text"></ion-input>
+    <ion-label position="floating">{{ 'CONFIRM_PASSWORD' | translate }}</ion-label>
+    <ion-input [(ngModel)]="user.confirmPassword" placeholder="{{ 'CONFIRM_PASSWORD' | translate }}" type="text"></ion-input>
   </ion-item>
 
-  <ion-button expand="block">Sign Up</ion-button>
+  <ion-button expand="block">{{ 'SIGNUP' | translate }}</ion-button>
   <ion-grid>
     <ion-row>
-      <ion-col><ion-router-link href="/sign-in">I already have an account</ion-router-link></ion-col>
+      <ion-col><ion-router-link href="/sign-in">{{ 'I_HAVE_ACCOUNT' | translate }}</ion-router-link></ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

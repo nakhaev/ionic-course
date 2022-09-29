@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MockService } from '../../services/mock.service';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -11,10 +10,7 @@ export class SignInPage implements OnInit {
 
   public user: any;
 
-  constructor(
-    protected mockService: MockService,
-    protected router: Router
-  ) { }
+  constructor( protected mockService: MockService ) { }
 
   ngOnInit() {
     this.user = {
@@ -26,9 +22,6 @@ export class SignInPage implements OnInit {
   public login() {
     console.log('logIn');
     this.mockService.login(this.user);
-    // if (this.mockService.checkLoggedIn()) {
-    //   this.router.navigate(['/']);
-    // }
   }
 
 }

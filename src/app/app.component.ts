@@ -31,9 +31,13 @@ export class AppComponent implements OnInit {
   }
 
   private checkUser(currentPage) {
-    if (currentPage === '/sign-in' || currentPage === '/sign-up' || currentPage === '/forgot-password') {
-      return;
-    }
+    if (
+      currentPage === '/sign-in' ||
+      currentPage === '/sign-up' ||
+      currentPage === '/forgot-password' ||
+      currentPage === '/about'
+    ) { return; }
+
     if (!this.mockService.checkLoggedIn()) {
       this.router.navigate(['/sign-in']);
     }

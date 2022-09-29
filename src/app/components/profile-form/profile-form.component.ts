@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MockService } from '../../services/mock.service';
+import {TranslateService} from '../../services/translate.service';
 
 @Component({
   selector: 'app-profile-form',
@@ -9,8 +11,19 @@ export class ProfileFormComponent implements OnInit {
 
   @Input() userProfile;
 
-  constructor() { }
+  public languageList = [{
+    name: 'English',
+    value: 'en'
+  }];
 
-  ngOnInit() {}
+  constructor(protected mockService: MockService, protected translateService: TranslateService) { }
+
+  ngOnInit() {
+    this.languageList = this.translateService.getLanguageList();
+  }
+
+  public updateProfile() {
+    this.mockService.updateProfile(this.userProfile);
+  }
 
 }

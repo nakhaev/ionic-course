@@ -1,25 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Sign In</ion-title>
+    <ion-title>{{ 'SIGNIN' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true" class="ion-padding">
   <ion-item class="ion-no-padding">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input [(ngModel)]="user.email" placeholder="email address" type="email"></ion-input>
+    <ion-label position="floating">{{ 'EMAIL' | translate }}</ion-label>
+    <ion-input [(ngModel)]="user.email" placeholder="{{ 'EMAIL_ADDRESS' | translate }}" type="email"></ion-input>
   </ion-item>
 
   <ion-item class="ion-margin-bottom ion-no-padding">
-    <ion-label position="floating">Password</ion-label>
-    <ion-input [(ngModel)]="user.password" placeholder="your last name" type="text"></ion-input>
+    <ion-label position="floating">{{ 'PASSWORD' | translate }}</ion-label>
+    <ion-input [(ngModel)]="user.password" placeholder="{{ 'PASSWORD' | translate }}" type="text"></ion-input>
   </ion-item>
 
-  <ion-button expand="block" (click)="login()">Sign In</ion-button>
+  <ion-button expand="block" (click)="login()">{{ 'SIGNIN' | translate }}</ion-button>
   <ion-grid>
     <ion-row>
-      <ion-col><ion-router-link href="forgot-password">Forgot password?</ion-router-link></ion-col>
-      <ion-col class="ion-text-right"><ion-router-link href="sign-up">Create Account</ion-router-link></ion-col>
+      <ion-col><ion-router-link href="forgot-password">{{ 'FORGOT_PASSWORD' | translate }}?</ion-router-link></ion-col>
+      <ion-col class="ion-text-right"><ion-router-link href="sign-up">{{ 'CREATE_ACCOUNT' | translate }}</ion-router-link></ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>{{ 'PROFILE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +8,12 @@
   <app-profile-form [userProfile]="userProfile"></app-profile-form>
   <app-profile-settings [userProfile]="userProfile"></app-profile-settings>
   <app-support-form [userProfile]="userProfile"></app-support-form>
-  <ion-button expand="block" (click)="logout()">Log out</ion-button>
-  <ion-button expand="block" color="warning">Become PRO</ion-button>
-  <ion-button expand="block" color="danger">Delete Profile</ion-button>
+  <ion-button expand="block" (click)="logout()">{{ 'LOG_OUT' | translate }}</ion-button>
+  <ion-button expand="block" color="warning">{{ 'BECOME_PRO' | translate }}</ion-button>
+  <ion-button expand="block" color="danger">{{ 'DELETE_ACCOUNT' | translate }}</ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center"><ion-router-link href="about">{{ 'ABOUT' | translate }}</ion-router-link></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
