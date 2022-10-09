@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MockService } from '../../services/mock.service';
 
 @Component({
   selector: 'app-client-form',
@@ -7,8 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientFormComponent implements OnInit {
 
-  constructor() { }
+  @Input() client;
 
-  ngOnInit() {}
+  public clientData = {};
+
+  constructor(protected mockService: MockService) { }
+
+  ngOnInit() {
+    this.clientData = { ...this.client};
+  }
+
+  public updateClientProfile() {
+    this.mockService.updateUserProfile(this.clientData);
+  }
+
+  public clearChanges() {
+    this.clientData = { ...this.client};
+  }
 
 }

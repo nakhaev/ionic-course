@@ -44,7 +44,7 @@ import { TranslatePipe } from './pipes/translate.pipe';
     SignUpPage,
     ForgotPasswordPage,
     SupportFormComponent,
-    TranslatePipe
+    TranslatePipe,
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

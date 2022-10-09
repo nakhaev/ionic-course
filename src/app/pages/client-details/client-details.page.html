@@ -6,7 +6,10 @@
 
 <ion-content>
   <div *ngIf="client">
-    <app-client-card [client]="client"></app-client-card>
+    <div class="client-image">
+      <img src="{{ client.photo }}"/>
+    </div>
+    <app-client-form [client]="client"></app-client-form>
   </div>
   <div *ngIf="!client">No client data...</div>
 </ion-content>

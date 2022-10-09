@@ -22,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'clients',
-    component: ClientsPage
+    component: ClientsPage,
+    pathMatch: 'full'
   },
   {
     path: 'about',
@@ -33,8 +34,9 @@ const routes: Routes = [
     component: ManufacturersPage,
   },
   {
-    path: 'clients/:id',
-    component: ClientDetailsPage
+    path: 'client/:id',
+    component: ClientDetailsPage,
+    pathMatch: 'full'
   },
   {
     path: 'profile',

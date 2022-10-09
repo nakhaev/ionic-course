@@ -16,8 +16,6 @@ export class TranslateService {
     if (!key) { return ''; }
     this.getCurrentLanguage();
 
-    console.log(key, this.profileLanguage);
-
     let dictionary = dictionaries[this.profileLanguage];
     if (!dictionary) { dictionary = dictionaries.en; }
 

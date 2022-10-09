@@ -21,12 +21,13 @@ export class ClientListComponent implements OnInit {
 
   ngOnInit() {
     this.clients = this.mockService.getClientList();
-    this.displayClients = this.clients;
+    this.displayClients = [ ...this.clients];
+    console.log('this.displayClients', this.displayClients);
   }
 
   public searchClients() {
     if (!this.search) {
-      this.displayClients = this.clients;
+      this.displayClients = [ ...this.clients];
     } else {
       this.displayClients = this.clients.filter(c =>
         c.firstName.toUpperCase().includes(this.search.toUpperCase()) ||
@@ -37,7 +38,6 @@ export class ClientListComponent implements OnInit {
   }
 
   public goToClientProfile(id: number) {
-    this.router.navigate([`/clients/${id}`]);
+    this.router.navigate([`/client/${id}`]);
   }
-
 }

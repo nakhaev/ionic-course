@@ -49,6 +49,16 @@ export class MockService {
 
   public updateProfile(userProfile) {
     this.user = userProfile;
-    console.log(this.user);
+  }
+
+  public updateUserProfile(client) {
+    const clients  = this.clients.filter(item => item.id !== client.id);
+    clients.push(client);
+    this.clients = clients;
+  }
+
+  public addNewClient(client) {
+    client.id = this.clients.length + 1;
+    this.clients.push(client);
   }
 }

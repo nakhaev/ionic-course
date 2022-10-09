@@ -6,8 +6,26 @@
 
 <ion-content>
   <app-client-list></app-client-list>
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <app-client-form [client]="client"></app-client-form>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button id="open-modal" >
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
